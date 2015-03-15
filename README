@@ -1,0 +1,42 @@
+------------------------------------------------------------------------
+				TTHFAPI	              created by: pedrxd
+------------------------------------------------------------------------
+		      SOLO COMPATIBLE CON 1.8.3
+					
+Api muy ligera para poder controlar las nuevas utilidades que han aparecido en 
+minecraft 1.8. Puedes tener el control sobre:
+
+
+Uso de la api
+-------------	
+	- El actionbar
+ 		ActionBar.sendActionBar(Player, message);
+		ActionBar.sendActionBar(message);
+		
+	- Sobre el comando /title
+		Title.sendTitle(Player, title);
+		Title.sendTitle(title);
+		Title.sendSubtitle(Player, subtitle);
+		Title.sendSubtitle(subtitle);
+		Title.sendTitleSub(Player, title, subtitle);
+		Title.sendTitleSub(title, subtitle);
+		
+	- El encabezamiento y final de la lista TAB
+		TabHeadFoot.sendTabHeadFoot(Player, header, footer);
+		TabHeadFoot.sendTabHeadFoot(header, footer);
+
+Acordaros de importar:
+
+	import pedrxd.TTHF.api.*;
+
+
+Variables
+---------	
+	%player% -- Es sustituido con el nombre de la persona que lo recibe.
+	
+	(Si creeis que es necesario de que añada alguna otra variable, decidmelo)
+
+------------------------------------------------------------------
+			
+        		PUEDES DESCARGAR EL PLUGIN DE AQUI:
+	https://github.com/pedrxd/TTHFapi/blob/master/TTHFapi.jar?raw=true

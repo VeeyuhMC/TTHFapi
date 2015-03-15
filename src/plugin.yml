@@ -1,0 +1,9 @@
+name: TTHFapi
+version: 1.1V
+author: Pedro Ruiz
+main: pedrxd.TTHF.Main
+commands:
+    tthfapi:
+        usage: /tthfapi
+        description: Obtener version 
+
