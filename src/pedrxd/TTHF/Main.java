@@ -9,10 +9,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin{
-	private Player p;
+	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
-		p = null;
+		Player p = null;
 		if(sender instanceof Player){
 			p = (Player) sender;
 		}else{

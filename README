@@ -22,8 +22,8 @@ Uso de la api
 		Title.sendTitleSub(title, subtitle);
 		
 	- El encabezamiento y final de la lista TAB
-		TabHeadFoot.sendTabHeadFoot(Player, header, footer);
-		TabHeadFoot.sendTabHeadFoot(header, footer);
+		TabMenu.sendTabHeadFoot(Player, header, footer);
+		TabMenu.sendTabHeadFoot(header, footer);
 
 Acordaros de importar:
 
