@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 
 
 	public class ActionBar {
-		private String message = " ";
+		private String message;
 		public ActionBar(){
 			
 		}
@@ -23,7 +23,7 @@ import org.bukkit.entity.Player;
 		public String getMessage(){
 			return this.message;
 		}
-		public void broadcastMessage(){
+		public void broadcastActionBar(){
 			for (Player list : Bukkit.getOnlinePlayers()) {
 				sendTo(list.getPlayer());
 			}

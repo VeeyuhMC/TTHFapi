@@ -84,7 +84,7 @@ public class Title {
 			 connection.sendPacket(packetPlayOutTitle);
 		 
 	}
-	public void broadcastMessage(){
+	public void broadcastTitle(){
 		for (Player list : Bukkit.getOnlinePlayers()) {
 			sendTo(list.getPlayer());
 		}

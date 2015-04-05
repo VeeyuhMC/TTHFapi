@@ -56,7 +56,7 @@ public class TabMenu {
 		}
 		connection.sendPacket(packet);
 	}
-	public void broadcast(){
+	public void broadcastTabMenu(){
 	
 			for (Player list : Bukkit.getOnlinePlayers()) {
 			sendTo(list.getPlayer());
