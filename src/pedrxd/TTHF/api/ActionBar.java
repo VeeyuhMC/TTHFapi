@@ -1,7 +1,7 @@
 package pedrxd.TTHF.api;
 
 
-	import net.minecraft.server.v1_8_R2.IChatBaseComponent;
+import net.minecraft.server.v1_8_R2.IChatBaseComponent;
 import net.minecraft.server.v1_8_R2.IChatBaseComponent.ChatSerializer;
 import net.minecraft.server.v1_8_R2.PacketPlayOutChat;
 
@@ -36,8 +36,5 @@ import org.bukkit.entity.Player;
 			craftplayer.getHandle().playerConnection.sendPacket(packet);
 		}
 
-		
-		
-		
 		
 }
