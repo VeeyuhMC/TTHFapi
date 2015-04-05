@@ -1,5 +1,11 @@
 package pedrxd.TTHF;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+
 import net.md_5.bungee.api.ChatColor;
 
 import org.bukkit.Bukkit;
@@ -17,10 +23,13 @@ public class Main extends JavaPlugin{
 			p = (Player) sender;
 		}else{
 			Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Version: " + ChatColor.BLUE + getDescription().getVersion());
+			Bukkit.getServer().getConsoleSender().sendMessage(checkVersion());
 			return true;
 		}
 		if(cmd.getName().equalsIgnoreCase("tthfapi") && p.hasPermission("TTHF.api")){
 			p.sendMessage(ChatColor.RED + "Version: " + ChatColor.BLUE + getDescription().getVersion());
+			p.sendMessage(checkVersion());
+			
 		}else{
 			p.sendMessage(ChatColor.RED + "You don't have permissions");
 		}
@@ -28,5 +37,28 @@ public class Main extends JavaPlugin{
 		
 		
 		return true;
+	}
+	private String checkVersion(){
+		String latestversion;
+		boolean isupdate;
+		try {
+			URL urlv = new URL("https://raw.githubusercontent.com/pedrxd/TTHFapi/NewApi/README");
+	        BufferedReader in = new BufferedReader(new InputStreamReader(urlv.openStream()));
+	        latestversion = in.readLine();
+	        if(latestversion.equalsIgnoreCase(getDescription().getVersion())){
+	        	isupdate = true;
+	        }else{
+	        	isupdate = false;
+	        }
+	        in.close();
+		} catch (IOException e) {
+			System.out.println("[TTHF] I can't connect to our servers, are you offline?");
+			return "";
+		}
+		if(isupdate){
+			return "The api is Update";
+		}else{
+			return "The api isn't update, latest version " + latestversion + ". Download it from http://www.spigotmc.org/resources/tthfapi.4938/";
+		}
 	}
 }
