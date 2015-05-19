@@ -26,8 +26,9 @@ public class Main extends JavaPlugin{
 			Bukkit.getServer().getConsoleSender().sendMessage(checkVersion());
 			return true;
 		}
-		if(cmd.getName().equalsIgnoreCase("tthfapi") && p.hasPermission("TTHF.api")){
-			p.sendMessage(ChatColor.RED + "Version: " + ChatColor.BLUE + getDescription().getVersion());
+		if(cmd.getName().equalsIgnoreCase("tthf") || cmd.getName().equalsIgnoreCase("tthfapi") && p.hasPermission("TTHF.api")){
+			p.sendMessage(ChatColor.AQUA + "Version: " + ChatColor.BLUE + getDescription().getVersion());
+			p.sendMessage(" ");
 			p.sendMessage(checkVersion());
 			
 		}else{
@@ -56,9 +57,9 @@ public class Main extends JavaPlugin{
 			return "";
 		}
 		if(isupdate){
-			return "The api is Update";
+			return ChatColor.GREEN  +"The api is Updated";
 		}else{
-			return "The api isn't update, latest version " + latestversion + ". Download it from http://www.spigotmc.org/resources/tthfapi.4938/";
+			return ChatColor.RED + "The api isn't update, latest version " + latestversion + ".  Download it from " + ChatColor.GOLD + ChatColor.BOLD + " http://www.spigotmc.org/resources/tthfapi.4938/";
 		}
 	}
 }

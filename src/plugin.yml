@@ -1,9 +1,11 @@
 name: TTHFapi
-version: 2.0V
+version: 2.1V
 author: Pedro Ruiz
 main: pedrxd.TTHF.Main
 commands:
     tthfapi:
         usage: /tthfapi
         description: Obtener version 
-
+    tthf:
+        usage: /tthf
+        description: Obtener version
